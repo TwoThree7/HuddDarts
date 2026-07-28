@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hudd Darts</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css" />
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="huddDarts.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+
+  <!-- TOP NAV -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="topnav">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Hudd Darts</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="tournament.html">Start A Game</a></li>
+          <li class="nav-item"><a class="nav-link" href="Posts">Posts</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+        <span class="navbar-text">
+          University of Huddersfield, Huddersfield, West Yorkshire
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <div id="page-content-wrapper">
+    <div class="background-card">
+        <div class="col-8">
+            <div class="card-body">
+                <h1 class="card-title">Hudd Darts</h1>
+                <p class="card-text">Welcome to Hudd Darts, the ultimate online darts game! Challenge your friends or play against the computer in a fun and competitive environment. Enjoy classic dart games like 301, 501, and Cricket, all from the comfort of your own home.</p>
+                <a href="projects.html" class="btn btn-primary">Start Playing</a>
+            </div>
+        </div>
+        <div class="col-4" id="content-grid">
+            <div class="card">
+                <div class="card-body">
+                    <span class="small-title">Team</span>
+                    <p class="card-text"><span id="registered-player-count">X</span></p>
+                    <span class="small-title">Registered Players</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <span class="small-title">Team Average</span>
+                    <h5 class="card-title"><span id="team-avg-count">X</span></h5>
+                    <span class="small-title">Across social tournaments, 3-dart average 501</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <span class="small-title">Current Record</span>
+                    <h5 class="card-title"><span id='win-count'>X</span>/<span id='loss-count'>X</span></h5>
+                    <span class="small-title">Wins/Losses</span>        
+            </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <span class="small-title">Next fixture</span>
+                    <h5 class="card-title"><span id='next-fixture'>X</span>(<span id="home-away">H</span>)</h5>
+                    <span class="small-title" id="match-date">DateTime</span>        
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-wrapper">
+        <h4 class="card-table-title">Leaderboard</h4>
+        <table id="leaderboard-table" class="leaderboard" style="width:100%">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Player</th>
+                    <th>Games Played</th>
+                    <th>3-Dart Avg</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="posts-wrapper">
+        <h4>Latest Posts</h4>
+        <button class="uoh-btn-primary">All Posts</button>
+        <div class="posts-container" id="posts-container">
+            <div class="post-card">
+                <h5 class="post-title">Post Title</h5>
+                <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nunc, eget aliquam nisl nunc ut nunc.</p>
+                <a href="#" class="btn btn-primary">Read More</a> 
+            </div>
+            <div class="post-card">
+                <h5 class="post-title">Post Title</h5>
+                <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nunc, eget aliquam nisl nunc ut nunc.</p>
+                <a href="#" class="btn btn-primary">Read More</a> 
+            </div>
+            <div class="post-card">
+                <h5 class="post-title">Post Title</h5>
+                <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nunc, eget aliquam nisl nunc ut nunc.</p>
+                <a href="#" class="btn btn-primary">Read More</a> 
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>
